@@ -1,0 +1,395 @@
+nav {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav__container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.nav__logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav__title {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+}
+
+.nav__list {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin-left: auto;
+}
+
+.nav__link {
+    position: relative;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav__link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.nav__link:hover {
+    color: #4da3ff;
+}
+
+.nav__link:hover::after {
+    transform: scaleX(1);
+    background-color: #4da3ff;
+}
+
+.nav__link--primary {
+    background-color: #02274e;
+    padding: 10px 16px;
+    border-radius: 9999px;
+    transition: all 0.3s ease;
+}
+
+.nav__link--primary:hover {
+    background: linear-gradient(135deg, #0f5fc4, #4da3ff);
+    transform: scale(1.05);
+    box-shadow: 0 0 14px rgba(77, 163, 255, 0.45);
+}
+
+.nav__link--primary::after {
+    display: none;
+}
+
+/* FILM IMAGE SECTION */
+
+.film-image {
+    position: relative;
+    width: 100%;
+    height: 25vh;
+    min-height: 280px;
+    overflow: hidden;
+}
+
+.film__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.film-nav {
+    position: relative;
+    width: 100%;
+    padding: 20px 60px;
+    z-index: 10;
+    background: #00152b;
+}
+
+.film-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+
+/* HEADER */
+
+h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: navy;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+p {
+    font-size: 24px;
+    font-weight: 600;
+    color: navy;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.search-bar input {
+    border: 1px solid #ccc;
+    width: 300px;
+    padding: 10px;
+    border-radius: 4px 0 0 4px;
+}
+
+.search-bar button {
+    padding: 10px 14px;
+    font-size: 16px;
+    border-radius: 0 4px 4px 0;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-start;
+    max-width: 1100px;
+    margin: 0 auto 10px;
+    padding: 0 30px;
+}
+
+.controls label {
+    font-weight: 600;
+    color: #333;
+}
+
+.controls select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* MOVIE GRID */
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 260px);
+    gap: 20px;
+    justify-content: center;
+    padding: 30px;
+}
+
+.movie-poster {
+    width: 100%;
+    max-width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: block;
+}
+
+.movie__title {
+    margin: 8px 0 0;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.movie__year {
+    margin: 4px 0 0;
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+}
+
+/* footer */
+
+footer p {
+    font-size: 0.95rem;
+    opacity: 0.7;
+    letter-spacing: 0.3px;
+}
+
+/* MOVIE DETAILS */
+
+.movie-details {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.movie-details__left {
+    width: 35%;
+}
+
+.movie-details__right {
+    flex: 1;
+    min-width: 0;
+}
+
+.movie-details__poster {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.movie-details__left h1 {
+    font-size: 28px;
+    text-align: left;
+    margin: 20px 0 12px;
+    color: #00152b;
+}
+
+.movie-details__left p {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.movie-details__right p {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+    color: #333;
+    line-height: 1.7;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.movie-details__right strong {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    color: #00152b;
+    margin-bottom: 8px;
+}
+
+.movie-details__container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding:0 24px;
+}
+
+.back-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #00152b;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: #4da3ff;
+}
+
+.movie-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* Skeleton Loading*/
+ .skeleton-poster {
+    width: 100%;
+    max-width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    margin: 0 auto;
+ }
+
+ .skeleton-title {
+    width: 70%;
+    height: 16px;
+    border-radius: 4px;
+    margin: 8px auto 0;
+ }
+
+ .skeleton-year {
+    width: 25%;
+    height: 14px;
+    border-radius: 4px;
+    margin: 4px auto 0;
+ }
+
+ .skeleton-poster,
+ .skeleton-title,
+ .skeleton-year {
+    background: #e0e0e0;
+    animation: skeleton-loading 1.5s infinite;
+ }
+
+ @keyframes skeleton-loading {
+    0%, 100% {
+        opacity: 1;
+    }
+ }
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+    .nav__container {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .nav__list {
+        margin-left: 0;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .film-nav {
+        padding: 20px 20px;
+    }
+     .movie-details {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .movie-details__left {
+        width: 100%;
+    }
+
+    .movie-details__poster {
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    .movie-details__right {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .movie-grid {
+        grid-template-columns: repeat(2, 260px);
+        padding: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .movie-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .movie-poster {
+        max-width: 260px;
+    }
+    .skeleton-poster {
+        max-width: 260px;
+    }
+}
