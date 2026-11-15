@@ -7,11 +7,11 @@ const MovieCard = ({ Title, Year, Poster, imdbID }) => {
    <article className="movie">
       <Link to={`/movie/${imdbID}`} className="movie-link">
       <img className="movie-poster"
-        src={Poster && Poster !== "N/A" ? Poster : "/no-poster.png"}
+        src={Poster && Poster !== "N/A" ? Poster : `${import.meta.env.BASE_URL}no-poster.png`}
         alt={Title}
         onError={(e) => {
           e.currentTarget.onerror = null;
-          e.currentTarget.src = "/no-poster.png"
+          e.currentTarget.src = `${import.meta.env.BASE_URL}no-poster.png`
         }}
         />
       <h3 className="movie__title">{Title}</h3>

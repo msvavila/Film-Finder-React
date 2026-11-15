@@ -44,11 +44,11 @@ const MovieDetails = () => {
             <div className="movie-details">
                 <div className="movie-details__left">
                     <img className="movie-details__poster"
-                        src={movie.Poster && movie.Poster !== 'N/A' ? movie.Poster : "/no-poster.png"}
+                        src={movie.Poster && movie.Poster !== "N/A" ? movie.Poster : `${import.meta.env.BASE_URL}no-poster.png`}
                         alt={movie.Title}
                         onError={(e) => {
                             e.currentTarget.onerror = null;
-                            e.currentTarget.src = "/no-poster.png"
+                            e.currentTarget.src = `${import.meta.env.BASE_URL}no-poster.png`
 
                         }}
                     />
